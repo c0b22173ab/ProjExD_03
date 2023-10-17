@@ -89,6 +89,8 @@ class Beam:
         self.rct.left = bird.rct.right  # こうかとんの右横座標
         self.rct.centery = bird.rct.centery  # こうかとんの中心縦座標
         self.vx, self.vy = +5, 0
+    
+
 
     def update(self, screen: pg.Surface):
         """
@@ -181,6 +183,48 @@ def main():
         pg.display.update()
         tmr += 1
         clock.tick(50)
+
+#爆発エフェクト
+class Explosion:
+    def __init__(self):
+    
+
+
+    clock = pg.time.Clock()
+    clock.tick()
+
+    def uppdate():
+
+
+
+
+#スコアを作成する
+
+
+
+
+
+
+class score():
+    def __init__(self):
+        self.font = pg.font.SysFont("hgp創英角ぽっぷ体", 30)
+        self.point = 0
+    
+       #円を作成
+        enn = pg.surface((20,20))
+        pg.draw.circle(enn, (0,0,255),(10,10), 10)
+        enn.set_colorkey((0,0,0))
+        self.img = self.font.render("スコア", 0, 255)
+    #スコアの計算
+
+        
+        
+
+    
+  
+
+
+
 
 
 if __name__ == "__main__":
