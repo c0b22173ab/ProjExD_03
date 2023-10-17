@@ -83,7 +83,7 @@ class Beam:
         ビーム画像Surfaceを生成する
         引数 bird：こうかとんインスタンス（Birdクラスのインスタンス）
         """
-        self.img = pg.image.load(f"ProjExD_03/fig/beam.png")
+        self.img = pg.image.load(f"ex03/fig/beam.png")
         self.rct = self.img.get_rect()
         self.rct.left = bird.rct.right  # こうかとんの右横座標
         self.rct.centery = bird.rct.centery  # こうかとんの中心縦座標
@@ -163,6 +163,9 @@ def main():
                     # 撃墜＝Noneにする
                     beam = None
                     bomb = None
+                    bird.change_img(6, screen)
+                    pg.display.update()
+                    time.sleep(1)                    
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
